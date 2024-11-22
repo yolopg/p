@@ -1,0 +1,102 @@
+
+/* 设置整体窗口背景渐变色 */
+QMainWindow {
+    background-color: #ffffff; /* 你可以选择纯色背景或者其他单色背景 */
+}
+/*QListWidget样式表*/
+QListWidget {
+    background-color: #f4f4f4; 
+    border: none;
+    color: #333333;  /* 深灰色文本 */
+    font-family: "Microsoft YaHei", "微软雅黑", "Noto Sans CJK", sans-serif;  /* 字体设置 */
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+QListWidget::Item {
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;  /* 浅灰色分隔线 */
+    background-color: #f4f4f4; /* 默认项背景为白色 */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+QListWidget::Item:hover {
+    background-color: #f1f1f1;  /* 悬停时背景色变为浅灰 */
+    color: #1db954;  /* 悬停时文本颜色变为 QQ 音乐常见的绿色 */
+}
+
+QListWidget::item:selected {
+    background-color: #e8f5e9;  /* 选中项背景色为淡绿色 */
+    color: #1db954;  /* 选中项的文本变为 QQ 音乐绿色 */
+    font-weight: bold;  /* 选中项加粗 */
+    outline: none;  /* 去掉选中项的焦点框 */
+}
+
+QListWidget::item:selected:focus {
+    border: none;  /* 去掉选中并聚焦时的边框 */
+    padding-left: 20px;  /* 选中并获得焦点时稍微偏移 */
+}
+
+QListWidget::Item:disabled {
+    background-color: #f9f9f9;  /* 禁用项背景色 */
+    color: #dcdcdc;  /* 禁用项文本为浅灰色 */
+    font-style: italic;  /* 禁用项使用斜体 */
+}
+
+/* 去掉双击时焦点框 */
+QListWidget::item:focus {
+    outline: none;  /* 去掉焦点框 */
+    border: none;  /* 去掉任何边框 */
+}
+
+
+/* 设置所有按钮的共同样式 */
+QPushButton#bnt_stop, QPushButton#bnt_last, QPushButton#bnt_next {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FFFFF0;
+    border: 2px solid  #FFFFF0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+} 
+
+/* 鼠标悬停时的样式 */
+QPushButton#bnt_stop:hover, QPushButton#bnt_last:hover, QPushButton#bnt_next:hover {
+    background-color: #2e7d32;
+    border: 2px solid #388e3c;
+}
+
+/* 按钮按下时的样式 */
+QPushButton#bnt_stop:pressed, QPushButton#bnt_last:pressed, QPushButton#bnt_next:pressed {
+    background-color: #388e3c;
+    border: 2px solid #2e7d32;
+    padding: 12px 22px;  /* 按下时按钮变大 */
+}
+
+/* 输入框 (QLineEdit) */
+QLineEdit {
+    background-color: rgba(128, 128, 128, 0.3);  /* 灰色半透明背景 */
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* 边框略微透明 */
+    border-radius: 8px;
+    padding: 5px 10px;
+    color: white;  /* 文本颜色 */
+    font-size: 16px;  /* 字体大小 */
+    font-family: "Arial", sans-serif;  /* 使用现代字体 */
+    font-weight: bold;  /* 粗体 */
+    text-align: left;  /* 文本左对齐 */
+    letter-spacing: 1px;  /* 字符间距 */
+    placeholder-color: rgba(255, 255, 255, 0.7); /* 占位符颜色 */
+}
+
+QLineEdit:focus {
+    background-color: rgba(128, 128, 128, 0.3);  /* 灰色半透明背景 */
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* 边框略微透明 */
+    border-radius: 8px;
+    padding: 5px 10px;  /* 减小上下内边距，增加左右内边距 */
+    color: white;
+    font-size: 14px;  /* 设置合适的字体大小 */
+    caret-color: #1E90FF;  /* 光标颜色 */
+}
+

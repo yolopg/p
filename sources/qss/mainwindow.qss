@@ -1,0 +1,26 @@
+QMainWindow{
+    background-color:#2e7d32;
+}
+/* 设置所有按钮的共同样式 */
+QPushButton#bnt_stop, QPushButton#bnt_last, QPushButton#bnt_next {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FFFFF0;
+    border: 2px solid  #FFFFF0;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+} 
+
+/* 鼠标悬停时的样式 */
+QPushButton#bnt_stop:hover, QPushButton#bnt_last:hover, QPushButton#bnt_next:hover {
+    background-color: #2e7d32;
+    border: 2px solid #388e3c;
+}
+
+/* 按钮按下时的样式 */
+QPushButton#bnt_stop:pressed, QPushButton#bnt_last:pressed, QPushButton#bnt_next:pressed {
+    background-color: #388e3c;
+    border: 2px solid #2e7d32;
+    padding: 12px 22px;  /* 按下时按钮变大 */
+}
